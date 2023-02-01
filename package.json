@@ -5,12 +5,30 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export"
+    "export": "next export",
+    "rhb-sync": "rm -rf react-handy-box && mkdir react-handy-box && cd react-handy-box && cp -R ~/Dev/react-handy-box-docs/react-handy-box/components . && cp -R ~/Dev/react-handy-box-docs/react-handy-box/hooks . && cp -R ~/Dev/react-handy-box-docs/react-handy-box/utilities ."
   },
   "dependencies": {
-    "cypress": "^10.0.3",
-    "next": "^12.1.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@popperjs/core": "^2.11.6",
+    "cypress": "^12.5.0",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lodash": "^4.17.21",
+    "mousetrap": "^1.6.5",
+    "polished": "^4.2.2",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.30.3",
+    "@types/lodash": "^4.14.191",
+    "@types/mousetrap": "^1.6.11",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "typescript": "4.9.5"
   }
 }
