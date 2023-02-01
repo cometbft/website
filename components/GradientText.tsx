@@ -11,7 +11,7 @@ function GradientText({ children }: GradientTextProps) {
     <Box
       as="span"
       styles={{
-        backgroundImage: 'linear-gradient(160deg, #78F0C5 20%, #0E65FD 90%)',
+        backgroundImage: 'linear-gradient(160deg, #0E65FD 20%, #78F0C5 90%)',
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
