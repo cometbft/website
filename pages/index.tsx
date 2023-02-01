@@ -78,7 +78,7 @@ export default function Home() {
                   fontSize: 'xlarge',
                 }}
               >
-                Future of Cosmos Consensus
+                The Future of Cosmos Consensus
               </Box>
             </Box>
 

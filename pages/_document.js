@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Inter&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="/favicon-informal.png" />
+          <link rel="shortcut icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
