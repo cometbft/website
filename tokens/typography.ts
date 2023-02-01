@@ -24,6 +24,9 @@ export const fontSizesAndLineHeights: TokensByBreakpoint<
   [string, string],
   typeof fontSizeNames[number]
 > = {
+  phoneOnly: {
+    normal: ['min(4vh, 4vw)', '1.4rem'],
+  },
   root: {
     xxlarge: ['4rem', '4rem'],
     xlarge: ['2rem', '2.5rem'],

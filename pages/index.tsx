@@ -11,9 +11,14 @@ export default function Home() {
         styles={{
           alignItems: 'center',
           height: '100vh',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           overflow: 'hidden',
-          rowGap: 'xxloose',
+          paddingY: 'xxloose',
+          rowGap: 0,
+          stylesForDesktopOrLarger: {
+            paddingY: 'normal',
+          },
+          textAlign: 'center',
           width: '100vw',
         }}
       >
@@ -27,12 +32,15 @@ export default function Home() {
             zIndex: '1--stickyElements',
           }}
         >
-          <Image
-            alt="CometBFT Logo"
-            src="/cometbft-logo.svg"
-            height={98}
-            width={88}
-          />
+          <Box
+            styles={{
+              height: 70,
+              position: 'relative',
+              width: '35vw',
+            }}
+          >
+            <Image alt="CometBFT Logo" src="/logo.svg" fill={true} />
+          </Box>
 
           {/* Hero and button */}
           <Box styles={{ alignItems: 'center', rowGap: 'normal' }}>
@@ -64,20 +72,29 @@ export default function Home() {
         </Box>
 
         {/* Footer */}
-        <Box styles={{ columnGap: 'xtight' }}>
-          <Box as="a" href="#">
+        <Box
+          styles={{
+            columnGap: 'tight',
+            fontSize: 'xlarge',
+            stylesForDesktopOrLarger: {
+              columnGap: 'xtight',
+              fontSize: 'large',
+            },
+          }}
+        >
+          <Box as="a" href="https://github.com/cometbft" target="_blank">
             <Icon name="github" variant="brands" />
           </Box>
 
-          <Box as="a" href="#">
+          <Box as="a" href="#" target="_blank">
             <Icon name="telegram" variant="brands" />
           </Box>
 
-          <Box as="a" href="#">
+          <Box as="a" href="https://twitter.com/cometbft" target="_blank">
             <Icon name="twitter" variant="brands" />
           </Box>
 
-          <Box as="a" href="#">
+          <Box as="a" href="#" target="_blank">
             <Icon name="discord" variant="brands" />
           </Box>
         </Box>
@@ -92,67 +109,79 @@ export default function Home() {
         {/* Orb: Top Left */}
         <Box
           styles={{
+            height: '200vw',
             left: 0,
             position: 'fixed',
+            stylesForDesktopOrLarger: {
+              height: '60vw',
+              transform: 'translate(0, 0)',
+              width: '60vw',
+            },
             top: 0,
+            transform: 'translate(-30%, 0)',
+            width: '200vw',
           }}
         >
-          <Image
-            alt="Decorative Element"
-            src="/orb-top-left.svg"
-            height={1200}
-            width={1600}
-          />
+          <Image alt="Decorative Element" src="/orb-top-left.svg" fill={true} />
         </Box>
 
         {/* Orb: Bottom Right */}
         <Box
           styles={{
             bottom: 0,
+            height: '200vw',
             position: 'fixed',
             right: 0,
+            stylesForDesktopOrLarger: {
+              height: '60vw',
+              transform: 'translate(0, 0)',
+              width: '60vw',
+            },
+            transform: 'translate(40%, 0)',
+            width: '200vw',
           }}
         >
           <Image
             alt="Decorative Element"
             src="/orb-bottom-right.svg"
-            height={1000}
-            width={678}
+            fill={true}
           />
         </Box>
 
         {/* Outline: Top Right */}
         <Box
           styles={{
-            top: 0,
+            height: '60vw',
             position: 'fixed',
             right: 0,
-            transform: 'translate(25%, -45%)',
+            stylesForDesktopOrLarger: {
+              height: '35vw',
+              width: '35vw',
+            },
+            top: 0,
+            transform: 'translate(25%, -25%)',
+            width: '60vw',
           }}
         >
-          <Image
-            alt="Decorative Element"
-            src="/logo-outline.svg"
-            height={622}
-            width={622}
-          />
+          <Image alt="Decorative Element" src="/logo-outline.svg" fill={true} />
         </Box>
 
         {/* Outline: Bottom Left */}
         <Box
           styles={{
             bottom: 0,
+            height: '60vw',
             left: 0,
             position: 'fixed',
-            transform: 'translate(-45%, 10%)',
+            stylesForDesktopOrLarger: {
+              height: '35vw',
+              width: '35vw',
+            },
+            transform: 'translate(-8%, 10%) rotate(180deg)',
+            width: '60vw',
           }}
         >
-          <Image
-            alt="Decorative Element"
-            src="/logo-outline.svg"
-            height={622}
-            width={622}
-          />
+          <Image alt="Decorative Element" src="/logo-outline.svg" fill={true} />
         </Box>
       </Box>
     </>
