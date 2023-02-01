@@ -178,18 +178,14 @@ export default function Home() {
             right: 0,
             stylesForDesktopOrLarger: {
               height: '60vw',
-              transform: 'translate(0, 0)',
+              transform: 'rotate(180deg) translate(0, 0)',
               width: '60vw',
             },
-            transform: 'translate(40%, 0)',
+            transform: 'rotate(180deg) translate(40%, 0)',
             width: '200vw',
           }}
         >
-          <Image
-            alt="Decorative Element"
-            src="/orb-bottom-right.svg"
-            fill={true}
-          />
+          <Image alt="Decorative Element" src="/orb-top-left.svg" fill={true} />
         </Box>
 
         {/* Outline: Top Right */}
