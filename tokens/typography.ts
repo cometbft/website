@@ -28,7 +28,7 @@ export const fontSizesAndLineHeights: TokensByBreakpoint<
     xxlarge: ['4rem', '4rem'],
     xlarge: ['2rem', '2.5rem'],
     large: ['1.5rem', '2rem'],
-    normal: ['32px', '1.4rem'],
+    normal: ['min(3vh, 3vw)', '1.4rem'],
     small: ['0.833rem', '1.2rem'],
     xsmall: ['0.588rem', '1rem'],
   },
