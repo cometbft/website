@@ -13,7 +13,7 @@ export default function Home() {
           height: '100vh',
           justifyContent: 'space-between',
           overflow: 'hidden',
-          paddingY: 'xxloose',
+          paddingY: 'loose',
           rowGap: 0,
           stylesForDesktopOrLarger: {
             paddingY: 'normal',
@@ -35,15 +35,29 @@ export default function Home() {
           <Box
             styles={{
               height: 70,
+              maxWidth: '35vw',
               position: 'relative',
-              width: '35vw',
+              stylesForDesktopOrLarger: {
+                position: 'fixed',
+                top: 'normal',
+                left: 'normal',
+              },
+              width: 298,
             }}
           >
             <Image alt="CometBFT Logo" src="/logo.svg" fill={true} />
           </Box>
 
           {/* Hero and button */}
-          <Box styles={{ alignItems: 'center', rowGap: 'normal' }}>
+          <Box
+            styles={{
+              alignItems: 'center',
+              rowGap: 'normal',
+              stylesForDesktopOrLarger: {
+                marginTop: 'xxloose',
+              },
+            }}
+          >
             {/* Headline and Subtitle */}
             <Box styles={{ alignItems: 'center', rowGap: 'tight' }}>
               <Box
@@ -76,7 +90,7 @@ export default function Home() {
           </Box>
         </Box>
 
-        {/* Footer */}
+        {/* Social Links */}
         <Box
           styles={{
             columnGap: 'tight',
@@ -84,6 +98,9 @@ export default function Home() {
             stylesForDesktopOrLarger: {
               columnGap: 'xtight',
               fontSize: 'large',
+              position: 'fixed',
+              top: 'normal',
+              right: 'normal',
             },
           }}
         >
@@ -105,6 +122,23 @@ export default function Home() {
 
           <Box as="a" href="https://discord.gg/cosmosnetwork" target="_blank">
             <Icon name="discord" variant="brands" />
+          </Box>
+        </Box>
+
+        {/* Footer */}
+        <Box styles={{ fontSize: 'small', rowGap: 'xtight' }}>
+          <Box>Stewarded By</Box>
+          <Box
+            styles={{
+              height: 50,
+              position: 'relative',
+            }}
+          >
+            <Image
+              alt="Informal Systems Logo"
+              src="/informal-systems-logo.svg"
+              fill={true}
+            />
           </Box>
         </Box>
       </Box>
