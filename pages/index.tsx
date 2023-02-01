@@ -135,11 +135,17 @@ export default function Home() {
               position: 'relative',
             }}
           >
-            <Image
-              alt="Informal Systems Logo"
-              src="/informal-systems-logo.svg"
-              fill={true}
-            />
+            <AnchorButton
+              href="https://informal.systems"
+              target="_blank"
+              variant="bare"
+            >
+              <Image
+                alt="Informal Systems Logo"
+                src="/informal-systems-logo.svg"
+                fill={true}
+              />
+            </AnchorButton>
           </Box>
         </Box>
       </Box>
