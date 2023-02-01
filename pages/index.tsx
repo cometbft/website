@@ -1,6 +1,6 @@
 import { GradientText } from '@/components/GradientText';
 import { Box } from '@/react-handy-box/components/Box';
-import { Button } from '@/react-handy-box/components/Button';
+import { AnchorButton, Button } from '@/react-handy-box/components/Button';
 import { Icon } from '@/react-handy-box/components/Icon';
 import Image from 'next/image';
 
@@ -67,7 +67,12 @@ export default function Home() {
               </Box>
             </Box>
 
-            <Button>View Docs</Button>
+            <AnchorButton
+              href="https://github.com/cometbft/cometbft/tree/main/docs"
+              target="_blank"
+            >
+              View Docs
+            </AnchorButton>
           </Box>
         </Box>
 
@@ -82,7 +87,11 @@ export default function Home() {
             },
           }}
         >
-          <Box as="a" href="https://github.com/cometbft" target="_blank">
+          <Box
+            as="a"
+            href="https://github.com/cometbft/cometbft"
+            target="_blank"
+          >
             <Icon name="github" variant="brands" />
           </Box>
 
