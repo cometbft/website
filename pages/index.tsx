@@ -10,6 +10,7 @@ export default function Home() {
       <Box
         styles={{
           alignItems: 'center',
+          backgroundColor: 'black',
           height: '100vh',
           justifyContent: 'space-between',
           overflow: 'hidden',
