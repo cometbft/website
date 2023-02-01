@@ -95,7 +95,7 @@ export default function Home() {
             <Icon name="github" variant="brands" />
           </Box>
 
-          <Box as="a" href="#" target="_blank">
+          <Box as="a" href="https://t.me/CometBFT" target="_blank">
             <Icon name="telegram" variant="brands" />
           </Box>
 
@@ -103,7 +103,7 @@ export default function Home() {
             <Icon name="twitter" variant="brands" />
           </Box>
 
-          <Box as="a" href="#" target="_blank">
+          <Box as="a" href="https://discord.gg/cosmosnetwork" target="_blank">
             <Icon name="discord" variant="brands" />
           </Box>
         </Box>
