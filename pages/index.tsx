@@ -14,6 +14,7 @@ export default function Home() {
           height: '100vh',
           justifyContent: 'space-between',
           overflow: 'hidden',
+          paddingX: 'normal',
           paddingY: 'loose',
           rowGap: 0,
           stylesForDesktopOrLarger: {
@@ -184,10 +185,10 @@ export default function Home() {
             right: 0,
             stylesForDesktopOrLarger: {
               height: '60vw',
-              transform: 'rotate(180deg) translate(0, 0)',
+              transform: 'translate(5%, 0) rotate(180deg)',
               width: '60vw',
             },
-            transform: 'rotate(180deg) translate(40%, 0)',
+            transform: 'translate(30%, 0) rotate(180deg)',
             width: '200vw',
           }}
         >
