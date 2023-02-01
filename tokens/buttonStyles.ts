@@ -28,9 +28,6 @@ const primaryButtonStyles = handyStyles(baseButtonStyles, {
   transform: 'scale(1)',
   transitionProperty: ['transform'],
   stylesOnHover: {
-    backgroundColor: 'primary',
-    backgroundColorLightness: '+100',
-    color: 'white',
     transform: 'scale(1.05)',
   },
 });
