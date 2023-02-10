@@ -1,8 +1,8 @@
 import {
   ModalLayerProps,
   ModalLayerRenderProps,
-  ModalLayerType,
 } from '@/react-handy-box/components/ModalLayer.types';
+import { ModalLayerVariantName } from '@/react-handy-box/types';
 import { Options } from '@popperjs/core';
 import { ReactNode } from 'react';
 
@@ -30,7 +30,7 @@ type PopoverExclusiveProps = {
   popperOptions?: Partial<Options>;
   popperPlacementOrder?: Array<Options['placement']>;
   renderTrigger: PopoverRenderFunction;
-  type?: ModalLayerType;
+  type?: ModalLayerVariantName;
   onBeforeClose?: PopoverEventHandler;
   onBeforeOpen?: PopoverEventHandler;
   onClose?: PopoverEventHandler;

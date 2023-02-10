@@ -139,7 +139,7 @@ export default function Home() {
             <AnchorButton
               href="https://informal.systems"
               target="_blank"
-              variant="bare"
+              variant="unstyled"
             >
               <Image
                 alt="Informal Systems Logo"

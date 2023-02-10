@@ -9,7 +9,7 @@ import { Button } from '@/react-handy-box/components/Button';
 import { Icon } from '@/react-handy-box/components/Icon';
 import { Menu } from '@/react-handy-box/components/Menu';
 import { MenuItem } from '@/react-handy-box/components/Menu.types';
-import { inputStyles } from '@/tokens/inputStyles';
+import { tokens } from '@/tokens';
 import { forwardRef, Ref } from 'react';
 
 type MultiSelectInputProps<T extends BaseOptionShape> = Omit<
@@ -61,12 +61,11 @@ const MultiSelectInput = forwardRef(
                 <Box
                   ref={propsForTrigger.ref as Ref<HTMLDivElement>}
                   styles={{
-                    ...inputStyles,
+                    ...tokens.inputStyles,
                     alignItems: 'center',
                     columnGap: 'tight',
                     display: 'flex',
                     justifyContent: 'space-between',
-                    paddingY: 'xxtight',
                     whiteSpace: 'nowrap',
                   }}
                   tabIndex={0}
@@ -74,15 +73,17 @@ const MultiSelectInput = forwardRef(
                 >
                   <Box
                     styles={{
-                      color: 'textFaded',
+                      color: 'text--faded',
                     }}
                   >
                     {placeholder}
                   </Box>
 
-                  <Button variant="iconOnly">
-                    <Icon name="chevron-down" />
-                  </Button>
+                  <Box styles={{ alignItems: 'center', height: 0 }}>
+                    <Button variant="iconOnly">
+                      <Icon name="chevron-down" />
+                    </Button>
+                  </Box>
                 </Box>
               )}
             />

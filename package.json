@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "rhb-sync": "rm -rf react-handy-box && mkdir react-handy-box && cd react-handy-box && cp -R ~/Dev/react-handy-box-docs/react-handy-box/components . && cp -R ~/Dev/react-handy-box-docs/react-handy-box/hooks . && cp -R ~/Dev/react-handy-box-docs/react-handy-box/utilities ."
+    "rhb-sync": "rm -rf react-handy-box && mkdir react-handy-box && cd react-handy-box && cp -R ~/Dev/react-handy-box-docs/react-handy-box/ ."
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",

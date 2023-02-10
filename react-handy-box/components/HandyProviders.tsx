@@ -1,25 +1,25 @@
-import { ThemeName } from '@/react-handy-box/components/Box.types';
 import {
   GlobalAnimations,
   GlobalStyles,
 } from '@/react-handy-box/components/GlobalStyles';
 import { ModalLayerProvider } from '@/react-handy-box/components/ModalLayer';
 import { GlobalIntervalProvider } from '@/react-handy-box/hooks/useGlobalInterval';
-import { themes } from '@/tokens/colorPalette';
+import { ColorThemeName } from '@/react-handy-box/types';
+import { tokenNames } from '@/tokenNames';
 import { ReactNode } from 'react';
 import { StyleSheetManager, ThemeProvider } from 'styled-components';
 
 export type HandyProviderRenderProps = {
-  activeThemeName: ThemeName;
-  setThemeName: (newActiveThemeName: ThemeName) => void;
+  activeThemeName: ColorThemeName;
+  setThemeName: (newActiveThemeName: ColorThemeName) => void;
 };
 
 const HandyProviders = ({
-  activeThemeName = 'light',
+  activeThemeName = tokenNames.colorThemes[0],
   children,
   disableVendorPrefixesInDevMode = true,
 }: {
-  activeThemeName?: ThemeName;
+  activeThemeName?: ColorThemeName;
   children: ReactNode;
   disableVendorPrefixesInDevMode?: boolean;
 }) => {
@@ -31,10 +31,10 @@ const HandyProviders = ({
           : undefined
       }
     >
-      <ThemeProvider theme={themes[activeThemeName]}>
+      <ThemeProvider theme={{ name: activeThemeName }}>
         <GlobalIntervalProvider>
           <GlobalAnimations />
-          <GlobalStyles theme={themes[activeThemeName]} />
+          <GlobalStyles />
           <ModalLayerProvider>{children}</ModalLayerProvider>
         </GlobalIntervalProvider>
       </ThemeProvider>

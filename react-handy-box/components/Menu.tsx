@@ -19,7 +19,7 @@ import {
   useKeyboardShortcuts,
 } from '@/react-handy-box/hooks/useKeyboardShortcuts';
 import { useMultipleRefs } from '@/react-handy-box/hooks/useMultipleRefs';
-import { modalLayerStyles } from '@/tokens/modalLayerStyles';
+import { tokens } from '@/tokens';
 import merge from 'lodash/merge';
 import {
   forwardRef,
@@ -70,7 +70,7 @@ const Menu = forwardRef(
       return options.length === 0 ? (
         <Box
           styles={{
-            color: 'textFaded',
+            color: 'text--faded',
             fontSize: 'small',
             textAlign: 'center',
           }}
@@ -202,7 +202,7 @@ const Menu = forwardRef(
         role="menu"
         styles={merge(
           {},
-          modalLayerStyles.menu,
+          tokens.modalLayerVariants.menu,
           { width: triggerWidth <= 200 ? undefined : triggerWidth },
           styles
         )}
@@ -257,11 +257,16 @@ const GroupLabel = forwardRef(
     <Box
       ref={ref}
       styles={{
-        color: 'textFaded',
+        color: 'text--faded',
         fontSize: 'small',
         paddingBottom: 'xtight',
         paddingTop: 'tight',
         paddingX: 'xtight',
+        stylesForCustomSelector: {
+          ':nth-child(2)': {
+            paddingTop: 'xtight',
+          },
+        },
         textTransform: 'uppercase',
         ...styles,
       }}
@@ -305,7 +310,7 @@ const MenuItem = forwardRef(
             zIndex: '1--stickyElements',
           },
           stylesOnHover: {
-            backgroundColor: 'selected',
+            backgroundColor: 'background--selected',
           },
           whiteSpace: 'nowrap',
         },
