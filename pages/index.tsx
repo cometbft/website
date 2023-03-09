@@ -83,10 +83,7 @@ export default function Home() {
               </Box>
             </Box>
 
-            <AnchorButton
-              href="https://github.com/cometbft/cometbft/tree/main/docs"
-              target="_blank"
-            >
+            <AnchorButton href="https://docs.cometbft.com/" target="_blank">
               View Docs
             </AnchorButton>
           </Box>
